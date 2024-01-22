@@ -1,0 +1,755 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+audio,
+canvas,
+video {
+    display: inline-block;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+[hidden] {
+    display: none;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+blockquote,
+q {
+    quotes: &#8220 &#8220;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+mark {
+    background-color: #A7F4F6;
+    color: #555;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    font-size: 62.5%;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background: #fff;
+    font-family: 'opensans-regular', sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 30px;
+    color: #838C95;
+    -webkit-font-smoothing: antialiased;
+    /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+}
+
+
+/*  2. Typography
+       Vertical rhythm with leading derived from 6
+--------------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #313131;
+    font-family: 'opensans-bold', sans-serif;
+    font-weight: normal;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    font-weight: inherit;
+}
+
+h1 {
+    font-size: 38px;
+    line-height: 42px;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 6px;
+}
+
+h3 {
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 12px;
+}
+
+h4 {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 6px;
+}
+
+h5 {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+h6 {
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.subheader {}
+
+p {
+    margin: 0 0 30px 0;
+}
+
+p img {
+    margin: 0;
+}
+
+p.lead {
+    font: 19px/36px 'opensans-light', sans-serif;
+    margin-bottom: 18px;
+}
+
+em {
+    font: 15px/30px 'opensans-italic', sans-serif;
+}
+
+strong,
+b {
+    font: 15px/30px 'opensans-bold', sans-serif;
+}
+
+small {
+    font-size: 11px;
+    line-height: inherit;
+}
+
+
+/* Abbreviations */
+
+abbr {
+    font-family: 'opensans-bold', sans-serif;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    letter-spacing: .5px;
+    color: gray;
+}
+
+abbr:hover {
+    cursor: help;
+}
+
+
+/* drop cap */
+
+.drop-cap:first-letter {
+    float: left;
+    margin: 0;
+    padding: 14px 6px 0 0;
+    font-size: 84px;
+    font-family: /* Copperplate */
+    'opensans-bold', sans-serif;
+    line-height: 60px;
+    text-indent: 0;
+    background: transparent;
+    color: inherit;
+}
+
+hr {
+    border: solid #E3E3E3;
+    border-width: 1px 0 0;
+    clear: both;
+    margin: 11px 0 30px;
+    height: 0;
+}
+
+
+/*  3. Links  ------------------------------------------------------- */
+
+a,
+a:visited {
+    text-decoration: none;
+    outline: 0;
+    color: #11ABB0;
+    -webkit-transition: color .3s ease-in-out;
+    -moz-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
+    transition: color .3s ease-in-out;
+}
+
+a:hover,
+a:focus {
+    color: #313131;
+}
+
+p a,
+p a:visited {
+    line-height: inherit;
+}
+
+
+/*  4. List  --------------------------------------------------------- */
+
+ul,
+ol {
+    margin-bottom: 24px;
+    margin-top: 12px;
+}
+
+ul {
+    list-style: none outside;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ol,
+ul.square,
+ul.circle,
+ul.disc {
+    margin-left: 30px;
+}
+
+ul.square {
+    list-style: square outside;
+}
+
+ul.circle {
+    list-style: circle outside;
+}
+
+ul.disc {
+    list-style: disc outside;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+    margin: 6px 0 6px 30px;
+}
+
+ul ul li,
+ul ol li,
+ol ol li,
+ol ul li {
+    margin-bottom: 6px;
+}
+
+li {
+    line-height: 18px;
+    margin-bottom: 12px;
+}
+
+ul.large li {}
+
+li p {}
+
+
+/*  5. Images  --------------------------------------------------------- */
+
+.row {
+    width: 96%;
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+
+/* fixed width for IE8 */
+
+.ie .row {
+    width: 1000px;
+}
+
+.narrow .row {
+    max-width: 980px;
+}
+
+.row .row {
+    width: auto;
+    max-width: none;
+    margin: 0 -20px;
+}
+
+
+/* row clearing */
+
+.row:before,
+.row:after {
+    content: " ";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+.column,
+.columns {
+    position: relative;
+    padding: 0 20px;
+    min-height: 1px;
+    float: left;
+}
+
+.column.centered,
+.columns.centered {
+    float: none;
+    margin: 0 auto;
+}
+
+
+/*  2. Misc -------------------------------------------------------- */
+
+.remove-bottom {
+    margin-bottom: 0 !important;
+}
+
+.half-bottom {
+    margin-bottom: 12px !important;
+}
+
+.add-bottom {
+    margin-bottom: 24px !important;
+}
+
+.no-border {
+    border: none;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.align-center {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+}
+
+
+/***************************************************************************************************************************************************************/
+
+
+/* screenwidth less than 900px
+--------------------------------------------------------------------- */
+
+@media only screen and (max-width: 900px) {
+    /* header styles
+   ------------------------------------------------------------------ */
+    header .banner {
+        padding-bottom: 12px;
+    }
+    header .banner-text h1 {
+        font: 78px/1.1em 'opensans-bold', sans-serif;
+        letter-spacing: -1px;
+    }
+    header .banner-text h3 {
+        font: 17px/1.9em 'librebaskerville-regular', serif;
+        width: 80%;
+    }
+    header .banner-text hr {
+        width: 65%;
+        margin: 12px auto;
+    }
+    /* nav-wrap */
+    #nav-wrap {
+        font: 11px 'opensans-bold', sans-serif;
+        letter-spacing: 1.5px;
+    }
+    /* Call to Action Section
+   ------------------------------------------------------------------- */
+    #call-to-action .header-col h1:before {
+        font-size: 66px;
+        line-height: 66px;
+    }
+    .section-head {
+        margin-bottom: 30px;
+    }
+    .header-col h1:before {
+        font-size: 66px;
+        line-height: 66px;
+    }
+    #contact .section-head p.lead {
+        font: 17px/33px opensans-light, sans-serif;
+    }
+}
+
+
+/*******************************************************************************************************************************************************************************************/
+
+body {
+    background: #0f0f0f;
+}
+
+header {
+    position: relative;
+    height: 800px;
+    min-height: 500px;
+    width: 100%;
+    background: #161415 url(../images/DJI_0147.png) no-repeat top center;
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+/* vertically center banner section */
+
+header:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+header .banner {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto;
+    width: 85%;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+header .banner-text {
+    width: 100%;
+}
+
+header .banner-text h1 {
+    font: 90px/1.1em 'opensans-bold', sans-serif;
+    color: #fff;
+    letter-spacing: -2px;
+    margin: 0 auto 18px auto;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+}
+
+header .banner-text h3 {
+    font: 18px/1.9em 'librebaskerville-regular', serif;
+    color: #A8A8A8;
+    margin: 0 auto;
+    width: 70%;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+}
+
+header .banner-text h3 span,
+header .banner-text h3 a {
+    color: #fff;
+}
+
+header .banner-text hr {
+    width: 60%;
+    margin: 18px auto 24px auto;
+    border-color: #2F2D2E;
+    border-color: rgba(150, 150, 150, .1);
+}
+
+
+/* header social links */
+
+.social {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social li {
+    margin-right: 10px;
+}
+
+.social a {
+    text-decoration: none;
+}
+
+.social img {
+    width: 40px;
+    /* Ajustez la taille selon vos besoins */
+    height: 40px;
+    /* Ajustez la taille selon vos besoins */
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social img:hover {
+    transform: scale(1.2);
+}
+
+
+/* scrolldown link */
+
+header .scrolldown a {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -29px;
+    color: #fff;
+    display: block;
+    height: 42px;
+    width: 42px;
+    font-size: 42px;
+    line-height: 42px;
+    color: #fff;
+    border-radius: 100%;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+header .scrolldown a:hover {
+    color: #F06000;
+}
+
+
+/* Navbar */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a:hover {
+    color: #F06000;
+    /* Couleur de survol */
+}
+
+
+/* Style pour la photo de profil dans la navbar */
+
+.profile-pic img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-contact {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.social li {
+    margin-right: 10px;
+}
+
+.social a {
+    text-decoration: none;
+}
+
+.social img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social img:hover {
+    transform: scale(1.2);
+}
+
+.contact-table {
+    width: 50%;
+    /* ou la largeur que vous préférez */
+    border-collapse: collapse;
+    margin: 20px auto;
+    /* Centre le tableau au milieu de la page */
+}
+
+.contact-table td {
+    padding: 10px;
+    text-align: center;
+    /* Centrer le contenu de chaque cellule */
+}
